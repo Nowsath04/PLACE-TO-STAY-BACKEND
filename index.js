@@ -35,7 +35,7 @@ app.use((req, res) => {
   res.status(404).json({ success: false, message: "Not Found" });
 });
 
-const startServer = async() => {
+const startServer = async () => {
   try {
     await mongoose.connect(process.env.MONGO_CONNECT);
     app.listen(port, () => console.log(`Server is Listening on port:${port}`));
